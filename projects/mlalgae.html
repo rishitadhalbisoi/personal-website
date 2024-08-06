@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="projects.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>algae detection</title>
+</head>
+<body>
+    <div class="page-title">
+        <h1>Algae Detection using Machine Learning</h1>
+    </div>
+    <div class="project-description">
+        <div class="the-text">
+            <div class="what-is-it">
+                <h1> what is it?</h1>
+                <p> This project studies the effectiveness of using machine learning on predicting algal blooms. Using Southern
+                    California's Coastal Observing System's (SCOOS) meteorological data, I designed and developed models to predict phytoplankton concentrations
+                    much before their onset.
+                </p>
+            </div>
+            <div class="cool-things">
+                <h1> cool things/ what i learned</h1>
+                <p> Learned all of the steps of the machine learning model process! Some of my details follow as below</p>
+                <p>Data processing: Had to find datasets for coastal places and then use pandas and numpy to observe and clean the data. The biggest problem 
+                    was dealing with the amount of 0/NAn concentrations, so I used XGBoost to impute missing phytoplankton concentrations for NaN and 0 values. 
+                </p>
+                <p>Feature Importance: Using XGBoost's feature importance method, I determined the relative importance and contribution of each of the features
+                    using different subsets to retrieve the optimal subset of parameters. 
+                </p>
+                <p>Studied and trained XGBoost, AdaBoost, and KNN models. To optimize my model training with the right hyper-parameters, I took advantage of 
+                    sklearn's GridSearchSV module to preform an exhaustive search over specified parameter values via  grid search.
+                </p>
+                <p>Evaluated the model with RMSE to best figure out the best model for predicting across all 3 piers between the 3 models. While the models performed regression
+                    in order to be able to spit out the estimated phytoplankton concentration, I then split the concentrations into different tiers based on how much of a risk
+                    they store: healthy water, warning for potential upcoming bloom, and infected. 
+                </p>
+                <p>
+                    Learned a lot about using python's visualization libraries, including seaborn and matplotlib! These tools were crucial for data processing and model evaluation.
+                </p>
+            </div>
+            <div class="see-more">
+                <h1>learn more</h1>
+                <p><a href="https://drive.google.com/file/d/1IrfNVjcULb4L5ETpJtWKzBbF3IpZuLJW/view">Poster</a></p>
+                <a href="https://drive.google.com/file/d/1qmsSQOa4hrRCfsf73TUovFiz5CnHuDEM/view?usp=drive_link">Report</a>
+            </div>
+        </div>
+        <div class="the-photos">
+            <div class="proj-image">
+                <img src="images/poster.png" width="600">
+            </div>
+            <div class="proj-image">
+                <img src="images/paper.png" width="400">
+            </div>
+            <div class="proj-image">
+                <img src="images/scatter.png" width="400">
+            </div>
+            <div class="proj-image">
+                <img src="images/features.png" width="400">
+            </div>
+
+        </div>
+    </div>
+
+
+</body>

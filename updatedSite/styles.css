@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.landing-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 400px;
+    background-image: url('./imgs/gradient.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.intro-text {
+    flex: 1;
+    margin-left: 60px;
+    text-align: left;
+}
+
+.intro {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.typer {
+    font-size: 1.5rem;
+}
+
+.profile-pic {
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-right: 20%;
+    }
+
+    .content-wrapper {
+        width: 90%;
+    }
+
+    .intro {
+        font-size: 1.5rem;
+    }
+
+    .typer {
+        font-size: 1.2rem;
+    }
+
+    .gradient1 {
+        width: 100%;
+        height: auto;
+    }
+}

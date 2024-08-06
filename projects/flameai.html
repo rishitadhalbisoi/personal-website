@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="projects.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>flame ai</title>
+</head>
+<body>
+    <div class="page-title">
+        <h1>Flame AI</h1>
+    </div>
+    <div class="project-description">
+        <div class="the-text">
+            <div class="what-is-it">
+                <h1> what is it?</h1>
+                <p> A project made for Hacklytics 2024, Flame AI is an advanced fire detection system alerting first responders & admins quickly, providing key data for optimal resource allocation & swift rescues.
+                    Flame AI revolutionizes fire safety with its advanced detection technology, offering a wide range of benefits:
+                    <ul>
+                        <li>Live Fire Detection: Real-time analysis of camera/video streams to detect fires</li>
+                        <li>Population Monitoring: Detects and reports the number of individuals in affected areas</li>
+                        <li>Multi-Camera Support: Monitors multiple camera views within a building for comprehensive coverage</li>
+                        <li>Instant Notifications: Sends alerts via Gmail and phone to designated administrators and first responders</li>
+                        <li>Intelligent Forecasting: Identifies regions at risk of fire using climate data</li>
+                        <li>Interactive Image Map: Offers real-time environmental metadata through an intuitive interface</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="cool-things">
+                <h1> cool things/ what i learned</h1>
+                <p> The machine learning in this project utilizes a hybrid approach, pairing a yolov5 computer vision model to detect people and 
+                    a logistic regression model trained on fire sensory data to reduce the number of false positives </p>
+                <p>We fine-tuned an existing yolov5 model for image classification on a dataset of fire images, tailored to our purpose</p>
+                <p>We used openCV to capture and preprocess the video stream data from our laptop, converting each frame to a format sutiable for analysis</p>
+                <p>To combat the idea of false positives, we used a logistic regression model trained on atmospheric data with features in most commercial sensors to learn more about the smoke</p>
+                <p>Used SMTP to send direct alerts immediately</p>
+            </div>
+            <div class="see-more">
+                <h1>learn more</h1>
+                <p><a href="https://docs.google.com/presentation/d/1nH2v-jcd21Bgl6i3HrNAcpUonI0zOgC9HILgcOFsmAI/edit#slide=id.g2cdad665e00_0_181">devfolio</a></p>
+                <a href="https://github.com/sswadkar/hackalytics">github</a>
+            </div>
+        </div>
+        <div class="the-photos">
+            <div class="proj-image">
+                <img src="images/homepage.png" width="600">
+            </div>
+            <div class="proj-image">
+                <img src="images/demo.png" width="600">
+            </div>
+            <div class="proj-image">
+                <img src="images/visual.png" width="600">
+            </div>
+            <div class="proj-image">
+                <img src="images/logans.png" width="600">
+            </div>
+
+        </div>
+    </div>
+
+
+</body>

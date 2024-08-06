@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="projects.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>poker bot</title>
+</head>
+<body>
+    <div class="page-title">
+        <h1>Poker Bot</h1>
+    </div>
+    <div class="project-description">
+        <div class="the-text">
+            <div class="what-is-it">
+                <h1> what is it?</h1>
+                <p> We first created a monte carlo simulator that would work for poker games for up to 10 players, calculating equity with different hands as inputs.
+                     Some of the features we had to implement efficiently included being able to deal from a deck of cards, the ability to shuffle, and hand evaluation.
+                     Once we had this aspect working, we began delving into game theory concepts such as regret matching (using accumulated regrets from past hands to adjust its decision-making process)
+                     and counterfactual regret minimization (a further advancement). We ran this on Kuhn Poker to evaluate the results.
+                </p>
+            </div>
+            <div class="cool-things">
+                <h1> cool things/ what i learned</h1>
+                <p> along the way, I studied a good deal of poker theory to help facilitate the building: </p>
+                    <ul>
+                        <li>pot odds, implied odds</li>
+                        <li>kuhn's poker</li>
+                        <li>nash equilibrium</li>
+                    </ul>
+                    <p>shuffling function: instead of using the brute force method, we used fisher-yates:</p>
+                    <ul>
+                        <li>swaps the last element and a randomly selected element from the whole array</li>
+                        <li>iterates from array index n-1 to 1</li>
+                        <li>creates am even distribution of a card at a particular spot in the deck so all permutations are equally likely</li>
+                        <li>reduces time complexity to O(n) from O(n^2)</li>
+                    </ul>
+                    <p>hand evaluation: how do we represent the value of a hand?? hash code-- to get a unique number for each combination of cards.
+                    but how much do we actually have to know about the hand? we don't want to sort the hand, that requires computation during decision-making
+                    solution: rank evaluation
+                    <ul>
+                        <li>we used bitmasks to create a perfect hash</li>
+                        <li>we pre-computerd a unique hash for every single card and rank using bits masks, creating lookup tables for easy access during decision-making</li>
+                        <li>creates am even distribution of a card at a particular spot in the deck so all permutations are equally likely</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="see-more">
+                <h1>learn more</h1>
+                <p><a href="https://docs.google.com/presentation/d/1nH2v-jcd21Bgl6i3HrNAcpUonI0zOgC9HILgcOFsmAI/edit#slide=id.g2cdad665e00_0_181">google slideshow</a></p>
+                <a href="https://github.com/tanmayhaldiya/PokerBot/tree/main/src">github</a>
+            </div>
+        </div>
+        <div class="the-photos">
+            <div class="proj-image">
+                <img src="images/sims.jpeg" width="400">
+            </div>
+            <div class="proj-image">
+                <img src="images/hands.png" width="400">
+            </div>
+            <div class="proj-image">
+                <img src="images/kuhny.jpeg" width="400">
+            </div>
+            <div class="proj-image">
+                <img src="images/cfrkuhn.png" width="400">
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
